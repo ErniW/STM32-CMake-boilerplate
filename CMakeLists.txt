@@ -35,6 +35,7 @@ set(CMAKE_C_FLAGS  "-mcpu=${MCU_ARCH}   \
 
 set(CMAKE_CXX_FLAGS ${CMAKE_C_FLAGS})
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin")
 
 # Link STM32F446RE startup code with rest of the code.
 add_subdirectory(STM32F446RE)
