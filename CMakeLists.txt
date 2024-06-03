@@ -1,14 +1,13 @@
 cmake_minimum_required(VERSION 3.0)
-set(CMAKE_TRY_COMPILE_TARGET_TYPE "STATIC_LIBRARY")
-
-set(CMAKE_SYSTEM_NAME Generic)
-set(CMAKE_SYSTEM_PROCESSOR arm)
-
-include(cmake/ARM_toolchain.cmake)
-project(blink VERSION 1.0.0 LANGUAGES ASM C CXX)
 
 # Use arm-none-eabi toolchain
+include(cmake/ARM_toolchain.cmake)
 
+# Fix the CMAKE issue "... is not able to compile a simple test program."
+set(CMAKE_TRY_COMPILE_TARGET_TYPE "STATIC_LIBRARY")
+
+# Set the project name
+project(blink VERSION 1.0.0 LANGUAGES ASM C CXX)
 
 # MCU parameters
 set(MCU_ARCH    "cortex-m4")
