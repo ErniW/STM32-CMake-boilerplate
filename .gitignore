@@ -6,4 +6,3 @@ build/STM32F446RE
 build/Makefile
 *.bin
 *.elf
-CMSIS/Include
