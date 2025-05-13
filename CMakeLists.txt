@@ -27,7 +27,7 @@ set(SOURCES
 # This prevents linker from "-rdynamic" error.
 set(CMAKE_SHARED_LIBRARY_LINK_C_FLAGS   "")
 set(CMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS "")
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,--gc-sections -T${LINKER}")
+set(CMAKE_EXE_LINKER_FLAGS "-Wl,--gc-sections -T${LINKER}")
 
 set(CMAKE_C_FLAGS  "-mcpu=${MCU_ARCH}   \
                     -D${STM32_MCU}      \
